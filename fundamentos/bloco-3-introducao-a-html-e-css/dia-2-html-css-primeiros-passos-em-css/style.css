@@ -1,0 +1,24 @@
+body{
+    font-size: 16px;
+}
+h1 {
+    color: orange;
+    size: 65px;
+    font-family: sans-serif;
+}
+.a_bk_cl {
+    background-color: blueviolet;
+}
+p{
+    font-weight: 600;
+    size: 300%;
+}
+#l1 {
+    background-color: yellow;
+}
+#l2{
+    background-color: green;
+}
+#l3 {
+    background-color: brown;
+}
