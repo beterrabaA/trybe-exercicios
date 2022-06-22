@@ -5,4 +5,6 @@ for(let i = 0;i < numbers.length;i++) {
     soma += numbers[i]
 }
 
-console.log(soma)
+let resultado = soma/(numbers.length)
+
+console.log(resultado)
