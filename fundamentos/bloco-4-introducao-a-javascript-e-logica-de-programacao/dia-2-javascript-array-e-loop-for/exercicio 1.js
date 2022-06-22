@@ -7,4 +7,8 @@ for(let i = 0;i < numbers.length;i++) {
 
 let resultado = soma/(numbers.length)
 
-console.log(resultado)
+if(resultado > 20) {
+console.log("Maior que 20")
+} else {
+    console.log("Menor que 20");
+}
