@@ -1,15 +1,9 @@
-let numbers = [5,9,3,19,70,8,100,2,35,27]
+let n = []
 
-var maior = numbers[numbers.length -1];
-let menor = 0;
-for (var i = 0; i < numbers.length; i++) {
-   if ( numbers[i] < maior ) {
-      maior = numbers[i];
-   } else {
-    menor = numbers[i]
-   }
-
+for(let i = 1;i <= 25;i++) {
+    n.push(i)
 }
 
-console.log(maior)
+console.log(n)
+
 
