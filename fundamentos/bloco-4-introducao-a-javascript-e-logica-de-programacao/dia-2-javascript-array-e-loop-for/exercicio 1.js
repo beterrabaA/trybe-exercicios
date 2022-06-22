@@ -1,14 +1,9 @@
-let numbers = [5,9,3,19,70,8,100,2,35,27]
-let soma = 0;
+let numbers = [5,9,3,19,70,8,100,120,35,27]
 
-for(let i = 0;i < numbers.length;i++) {
-    soma += numbers[i]
+var maior = 0;
+for (var i = 0; i < numbers.length; i++) {
+   if ( numbers[i] > maior ) {
+      maior = numbers[i];
+   }
 }
-
-let resultado = soma/(numbers.length)
-
-if(resultado > 20) {
-console.log("Maior que 20")
-} else {
-    console.log("Menor que 20");
-}
+console.log(maior);
