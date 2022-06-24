@@ -4,10 +4,26 @@ const readline = require('readline').createInterface({
   });
   
   readline.question('Qual a peça de xadrez?', name => {
-    if(name === 'bispo') {
-        console.log('Boa escolha')
-    } else {
-        console.log('Escolheu errado!')
+    
+    switch(name) {
+      case 'bispo':
+        console.log('Diagonais')
+        break;
+      case 'rainha':
+        console.log('Todas as direções')
+        break;
+      case 'peao':
+        console.log('Frente')
+        break;
+      case 'torre':
+        console.log('Frente e laterais');
+        break;
+      case 'rei':
+        console.log('Diagonal:Duas casas')
+        break;
+        case 'cavalo':
+          console.log('Movimento especifico')
+          break;
     }
     readline.close();
   });
