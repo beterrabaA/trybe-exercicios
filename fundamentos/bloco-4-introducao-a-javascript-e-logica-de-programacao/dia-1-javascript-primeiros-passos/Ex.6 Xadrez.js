@@ -1,29 +1,17 @@
-const readline = require('readline').createInterface({
-    input: process.stdin,
-    output: process.stdout
-  });
-  
-  readline.question('Qual a peça de xadrez?', name => {
-    
-    switch(name) {
-      case 'bispo':
-        console.log('Diagonais')
-        break;
-      case 'rainha':
-        console.log('Todas as direções')
-        break;
-      case 'peao':
-        console.log('Frente')
-        break;
-      case 'torre':
-        console.log('Frente e laterais');
-        break;
-      case 'rei':
-        console.log('Diagonal:Duas casas')
-        break;
-        case 'cavalo':
-          console.log('Movimento especifico')
-          break;
-    }
-    readline.close();
-  });
+let nota = 60;
+
+if(nota > 0 && nota <100) {
+  if(nota >=90) {
+    console.log('A');
+  } else if(nota >= 80) {
+    console.log('B');
+  } else if(nota >= 70) {
+    console.log('C');
+  }else if(nota >= 60) {
+    console.log('D');
+  }else if(nota >= 50) {
+    console.log('E');
+  } else {
+    console.log('F')
+  }
+}
