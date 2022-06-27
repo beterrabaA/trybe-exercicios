@@ -1,16 +1,24 @@
-function menorQue(){
-const array = [2, 4, 6, 7, 10, 0, -3];
-let maior;
-let menor;
+let array =['José', 'Lucas', 'Nádia', 'Fernanda', 'Cairo', 'Joana'];
+let geral = []
 
-for(let i = 0;i < array.length;i++) {
-    if(array[i] > array[i+1]){
+function maiorNome(nomes) {
+let length = 0
+    for(let i =0;i < array.length;i++) {
+        if(length < array[i].length) {
+            length = array[i].length
+        }
+    }
+
+    for(var j =0; j < nomes.length; j++){
+        if(array[j].length === length)
+        geral.push(array[j])
+    }
+
+    if(geral.length === 1) {
+        return geral[0]
     } else {
-        menor = i
+        return geral
     }
 }
 
-return menor
-}
-
-console.log(menorQue());
+console.log(maiorNome(array))
