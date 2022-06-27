@@ -1,17 +1,11 @@
-var palavra = 'banana'
-var splitado = palavra.split('').reverse().join('')
+const array = [2, 3, 6, 7, 10, 1];
+let maior;
 
-function verificaPalindrome(palavra,splitado) {
-    var palavra = 'arara'
-    var splitado = palavra.split('').reverse().join('')
-    if(palavra === splitado) {
-        return true
-    } else {
-        return false
+for(let i = 0;i < array.length;i++) {
+    if(array[i] > array[i+1]){
+        maior = i
     }
-
 }
 
+console.log(maior)
 
-
-console.log(verificaPalindrome());
