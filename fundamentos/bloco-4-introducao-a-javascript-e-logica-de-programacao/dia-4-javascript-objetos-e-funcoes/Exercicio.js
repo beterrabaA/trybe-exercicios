@@ -16,4 +16,4 @@ let leitor = {
   ],
 };
 
-console.log('O livro favorito de',leitor.nome,leitor.sobrenome,'se chama',leitor.livrosFavoritos);
+console.log(leitor.nome,'tem',leitor.livrosFavoritos.length,'livros favoritos');
