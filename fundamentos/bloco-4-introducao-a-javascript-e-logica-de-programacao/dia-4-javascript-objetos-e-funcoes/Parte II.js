@@ -1,8 +1,4 @@
-let N = 6
-let junto = 0
+let stringWord = 'joaofernando'
+let stringEnd = 'fernan'
 
-for(let i =1;i <= N;i++) {
-    junto += i
-}
-
-console.log(junto);
+console.log(stringWord.endsWith(stringEnd)); // retorna true
