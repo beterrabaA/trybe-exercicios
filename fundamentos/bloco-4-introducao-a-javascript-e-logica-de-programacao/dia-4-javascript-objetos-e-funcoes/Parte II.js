@@ -1,11 +1,8 @@
-let array =[2, 3, 2, 5, 8, 2, 3];
-let counts = {}
+let N = 6
+let junto = 0
 
-array.forEach((count) => {
-    counts[count]= (counts[count] || 0) +1;
-})
+for(let i =1;i <= N;i++) {
+    junto += i
+}
 
-const maxValue = Math.max(...Object.values(counts))
-//console.log(Object.keys(counts));
-const num = Object.keys(counts).find((key) => counts[key] === maxValue)
-console.log(num);
+console.log(junto);
