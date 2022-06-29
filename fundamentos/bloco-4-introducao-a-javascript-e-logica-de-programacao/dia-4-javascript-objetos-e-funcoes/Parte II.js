@@ -1,24 +1,11 @@
-let array =['José', 'Lucas', 'Nádia', 'Fernanda', 'Cairo', 'Joana'];
-let geral = []
+let array =[2, 3, 2, 5, 8, 2, 3];
+let counts = {}
 
-function maiorNome(nomes) {
-let length = 0
-    for(let i =0;i < array.length;i++) {
-        if(length < array[i].length) {
-            length = array[i].length
-        }
-    }
+array.forEach((count) => {
+    counts[count]= (counts[count] || 0) +1;
+})
 
-    for(var j =0; j < nomes.length; j++){
-        if(array[j].length === length)
-        geral.push(array[j])
-    }
-
-    if(geral.length === 1) {
-        return geral[0]
-    } else {
-        return geral
-    }
-}
-
-console.log(maiorNome(array))
+const maxValue = Math.max(...Object.values(counts))
+//console.log(Object.keys(counts));
+const num = Object.keys(counts).find((key) => counts[key] === maxValue)
+console.log(num);
