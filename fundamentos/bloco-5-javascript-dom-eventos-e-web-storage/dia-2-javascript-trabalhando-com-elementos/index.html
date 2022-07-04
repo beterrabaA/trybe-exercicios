@@ -86,6 +86,15 @@
       let w = pero7.appendChild(document.createElement("img"));
       w.setAttribute('src','https://picsum.photos/200')
       w.setAttribute('class','small-image');
+      //Passo #8
+      var ex = ["Um", "Dois", "Três", "Quatro", "Cinco", "Seis", "Sete", "Oito", "Nove", "Dez"]
+      let pero8 =document.querySelector('.right-content');
+      let e = pero8.appendChild(document.createElement("ol"));
+      for(let i = 0;i< ex.length;i++) {
+        let lol =document.querySelector('ol');
+        let lwl = lol.appendChild(document.createElement("li"))
+        lwl.innerText = ex[i]
+      }
     </script>
   </body>
 </html>
