@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Exercício 5.2</title>
+    <style>
+      section {
+        border-color: black;
+        border-style: solid;
+      }
+
+      .title {
+        text-align: center;
+      }
+
+      .main-content {
+        background-color: yellow;
+      }
+
+      .main-content .center-content {
+        background-color: red;
+        width: 50%;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .main-content .center-content p {
+        font-style: italic;
+      }
+
+      .main-content .left-content {
+        background-color: green;
+        width: 60%;
+        margin-left: 0;
+        margin-right: auto;
+      }
+
+      .main-content .left-content .small-image {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        border-radius: 100%;
+      }
+
+      .main-content .right-content {
+        background-color: blue;
+        width: 60%;
+        margin-left: auto;
+        margin-right: 0;
+      }
+
+      .main-content .description {
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <script>
+      // Passo #1
+      let pero1 = document.querySelector('body');
+      let g = pero1.appendChild(document.createElement("h1"));
+      g.innerText = "Exercício 5.2 - JavaScript DOM";
+      g.setAttribute('class','title')
+      //Passo #2
+      let pero2 =document.querySelector('body');
+      let h = pero2.appendChild(document.createElement("main"));
+      h.setAttribute('class','main-content');
+      //Passo #3
+      let pero3 =document.querySelector('main');
+      let j = pero3.appendChild(document.createElement("section"));
+      j.setAttribute('class','center-content');
+      //Passo #4
+      let pero4 =document.querySelector('.center-content');
+      let k = pero4.appendChild(document.createElement("p"));
+      k.innerText = " It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."
+      //Passo #5
+      let pero5 =document.querySelector('main');
+      let l = pero5.appendChild(document.createElement("section"));
+      l.setAttribute('class','left-content');
+      //Passo #6
+      let pero6 =document.querySelector('main');
+      let q = pero6.appendChild(document.createElement("section"));
+      q.setAttribute('class','right-content');
+      //Passo #7
+      let pero7 =document.querySelector('.left-content');
+      let w = pero7.appendChild(document.createElement("img"));
+      w.setAttribute('src','https://picsum.photos/200')
+      w.setAttribute('class','small-image');
+      //Passo #8
+      var ex = ["Um", "Dois", "Três", "Quatro", "Cinco", "Seis", "Sete", "Oito", "Nove", "Dez"]
+      let pero8 =document.querySelector('.right-content');
+      let e = pero8.appendChild(document.createElement("ol"));
+      for(let i = 0;i< ex.length;i++) {
+        let lol =document.querySelector('ol');
+        let lwl = lol.appendChild(document.createElement("li"))
+        lwl.innerText = ex[i]
+      }
+      //Passo #9
+      let pero9 =document.querySelector('main');
+      for(let o = 1;o <4;o++){
+        let y = pero9.appendChild(document.createElement("h3"));
+        y.setAttribute('class','description')
+      }
+
+      // Alterações e remoções:
+
+      //Passo #3
+      let qw = document.querySelector('main')
+      let io = document.querySelector('.left-content')
+      let noremovido = qw.removeChild(io)
+      //Passo #4
+      let rc = document.querySelector('.right-content')
+      let rcs = rc.style.marginRight = "auto"
+      //Passo #5
+      let cc = document.querySelector('.center-content')
+      let ccs = cc.style.backgroundColor = "green"
+      //Passo #6
+      let olk = document.querySelector('ol')
+      let li1 = document.querySelectorAll('li')[8]
+      let rm1 = olk.removeChild(li1)
+      let li2 = document.querySelectorAll('li')[8]
+      let rm2 = olk.removeChild(li2)
+
+    </script>
+  </body>
+</html>
