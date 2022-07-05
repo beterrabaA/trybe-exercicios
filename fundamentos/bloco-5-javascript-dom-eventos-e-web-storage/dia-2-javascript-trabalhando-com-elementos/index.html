@@ -61,6 +61,7 @@
       let pero1 = document.querySelector('body');
       let g = pero1.appendChild(document.createElement("h1"));
       g.innerText = "Exercício 5.2 - JavaScript DOM";
+      g.setAttribute('class','title')
       //Passo #2
       let pero2 =document.querySelector('body');
       let h = pero2.appendChild(document.createElement("main"));
@@ -104,10 +105,9 @@
 
       // Alterações e remoções:
 
-      //Passo #1
-      g.setAttribute('class','title')
-      //Passo #2
-
+      let qw = document.querySelector('main')
+      let io = document.querySelector('.left-content')
+      let noremovido = qw.removeChild(io)
     </script>
   </body>
 </html>
