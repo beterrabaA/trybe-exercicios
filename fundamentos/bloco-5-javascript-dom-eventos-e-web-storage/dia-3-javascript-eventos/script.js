@@ -13,6 +13,9 @@ function createDaysOfTheWeek() {
   };
   
   createDaysOfTheWeek();
+
+  let botaoFeriado = document.getElementById('btn-holiday')
+  botaoFeriado.addEventListener('click',mudaCorFeriado)
   
   const listDay = document.getElementById('days')
   let totalDays = document.getElementsByClassName('day')
@@ -28,22 +31,22 @@ function createDaysOfTheWeek() {
   totalDays[0].innerText = 29
   totalDays[1].innerText = 30
 
-  if(innerDay.innerText = i -2 === 24) {
-    innerDay.innerText = i -2
-    innerDay.classList.add('holiday')
-  }else if (innerDay.innerText = i -2 === 25) {
-    innerDay.innerText = i -2
-    innerDay.classList.add('holiday')
-  }else if (innerDay.innerText = i -2 === 31) {
-    innerDay.innerText = i -2
-    innerDay.classList.add('holiday')
-  } else {
-    innerDay.innerText = i -2
-    innerDay.setAttribute('class','day')
-  }
   }
 
 for (let f = 5; f < totalDays.length; f +=7) {
   const element = totalDays[f];
   element.classList.add('friday')
+}
+
+function mudaCorFeriado() {
+  for(let g = 2;g < totalDays.length;g++) {
+    const diaTexto = totalDays[g]
+    if(diaTexto.innerHTML === '24') {
+      diaTexto.classList.add('holiday')
+    } else if(diaTexto.innerHTML === '25') {
+      diaTexto.classList.add('holiday')
+    }  else if(diaTexto.innerHTML === '31') {
+      diaTexto.classList.add('holiday')
+    } 
+    }
 }
