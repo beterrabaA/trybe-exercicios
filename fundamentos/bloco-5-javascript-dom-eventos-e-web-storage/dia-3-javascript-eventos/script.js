@@ -34,8 +34,7 @@ function createDaysOfTheWeek() {
   innerDay.innerText = i -2
   totalDays[0].innerText = 29
   totalDays[1].innerText = 30
-
-  }
+}
 
 
 
@@ -73,3 +72,10 @@ let sextas = document.getElementsByClassName('friday')
 function removeSexta() {
   location.reload()
 }
+adicionaTarefa()
+function adicionaTarefa() {
+  const listTarefa = document.querySelector('.my-tasks')
+  const innerList = listTarefa.appendChild(document.createElement('span'))
+  innerList.innerHTML ='Projetos'
+}
+
