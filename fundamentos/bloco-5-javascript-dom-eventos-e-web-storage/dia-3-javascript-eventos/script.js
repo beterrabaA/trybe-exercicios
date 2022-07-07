@@ -16,6 +16,9 @@ function createDaysOfTheWeek() {
 
   let botaoFeriado = document.getElementById('btn-holiday')
   botaoFeriado.addEventListener('click',mudaCorFeriado)
+  let botaoSextaFeira = document.getElementById('btn-friday')
+  botaoSextaFeira.addEventListener('click',mudaSexta)
+
 
   const listDay = document.getElementById('days')
   let totalDays = document.getElementsByClassName('day')
@@ -33,10 +36,7 @@ function createDaysOfTheWeek() {
 
   }
 
-for (let f = 5; f < totalDays.length; f +=7) {
-  const element = totalDays[f];
-  element.classList.add('friday')
-}
+
 
 function mudaCorFeriado() {
   for(let g = 2;g < totalDays.length;g++) {
@@ -54,4 +54,11 @@ function mudaCorFeriado() {
 
 function removeCorFeriado() {
   location.reload()
+}
+
+function mudaSexta() {
+  for (let f = 5; f < totalDays.length; f +=7) {
+    const element = totalDays[f];
+    element.classList.add('friday')
+  }
 }
