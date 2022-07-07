@@ -157,3 +157,8 @@
   .holiday {
     background-color:  greenyellow;
   }
+
+  .day:hover {
+    transform: scale(1.3);
+    cursor: pointer;
+  }
