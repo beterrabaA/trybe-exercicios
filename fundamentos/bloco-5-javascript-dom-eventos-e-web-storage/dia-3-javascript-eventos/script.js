@@ -20,6 +20,7 @@ function createDaysOfTheWeek() {
   botaoSextaFeira.addEventListener('click',mudaSexta)
 
 
+
   const listDay = document.getElementById('days')
   let totalDays = document.getElementsByClassName('day')
 
@@ -61,4 +62,14 @@ function mudaSexta() {
     const element = totalDays[f];
     element.classList.add('friday')
   }
+let sextas = document.getElementsByClassName('friday')
+  for (let d = 0; d< sextas.length; d++) {
+   const elemento = sextas[d];
+    elemento.innerHTML = 'Sextou'
+  }
+  botaoSextaFeira.addEventListener('click',removeSexta)
+}
+
+function removeSexta() {
+  location.reload()
 }
