@@ -76,6 +76,8 @@ adicionaTarefa()
 function adicionaTarefa() {
   const listTarefa = document.querySelector('.my-tasks')
   const innerList = listTarefa.appendChild(document.createElement('span'))
+  const innerDiv = listTarefa.appendChild(document.createElement('div'))
+  innerDiv.setAttribute('class','task')
   innerList.innerHTML ='Projetos'
 }
 
