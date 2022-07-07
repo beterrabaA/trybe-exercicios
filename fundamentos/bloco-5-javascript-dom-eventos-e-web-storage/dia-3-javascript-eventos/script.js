@@ -16,7 +16,7 @@ function createDaysOfTheWeek() {
 
   let botaoFeriado = document.getElementById('btn-holiday')
   botaoFeriado.addEventListener('click',mudaCorFeriado)
-  
+
   const listDay = document.getElementById('days')
   let totalDays = document.getElementsByClassName('day')
 
@@ -49,4 +49,9 @@ function mudaCorFeriado() {
       diaTexto.classList.add('holiday')
     } 
     }
+    botaoFeriado.addEventListener('click',removeCorFeriado)
+}
+
+function removeCorFeriado() {
+  location.reload()
 }
