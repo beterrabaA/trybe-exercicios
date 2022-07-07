@@ -19,6 +19,7 @@ function createDaysOfTheWeek() {
   let botaoSextaFeira = document.getElementById('btn-friday')
   botaoSextaFeira.addEventListener('click',mudaSexta)
 
+ 
 
 
   const listDay = document.getElementById('days')
@@ -72,6 +73,7 @@ let sextas = document.getElementsByClassName('friday')
 function removeSexta() {
   location.reload()
 }
+
 adicionaTarefa()
 function adicionaTarefa() {
   const listTarefa = document.querySelector('.my-tasks')
@@ -81,3 +83,22 @@ function adicionaTarefa() {
   innerList.innerHTML ='Projetos'
 }
 
+let colorSelect = document.querySelector('.task')
+colorSelect.addEventListener('click',clickSelected)
+function clickSelected() {
+  document.querySelectorAll("li").forEach( function(button) {
+    
+    button.addEventListener("click", function(event) {
+    const el = event.target || event.srcElement;
+    const id = el.classList.add('selected');
+    console.log(id);
+
+  });
+  
+});
+mudarSelected(el)
+}
+
+function mudarSelected (el){
+  el.classList.remove('selected');
+}

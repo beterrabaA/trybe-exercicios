@@ -27,6 +27,10 @@
     margin: 0;
   }
   
+  .selected {
+    text-decoration-color: green;
+  }
+
   #days li {
     color: #777;
     display: inline-block;
@@ -166,3 +170,4 @@
   .task {
     background-color: green;
   }
+
