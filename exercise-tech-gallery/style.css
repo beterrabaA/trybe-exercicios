@@ -1,0 +1,78 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Ubuntu';
+}
+
+.header-img {
+  width: 70px;
+}
+
+.gallery-img {
+  width: 150px;
+}
+
+.social-img {
+  width: 25px;
+  margin-left: 10px;
+}
+
+header {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  background-color: #3d3d3d;
+  color: white;
+}
+
+h4 {
+  margin-bottom: 10px;
+}
+.signup:hover {
+  cursor: pointer;
+  color: rgb(211, 202, 202);
+}
+
+.text_Down_Header {
+  display: flex;
+  justify-content: center;
+  margin: 10px;
+}
+
+.itens_1 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.itens_2 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.test-box {
+  width: 180px;
+  height: 220px;
+  text-align: center;
+  justify-items: center;
+  background-color: #efebeb;
+  padding: 20px 10px 10px;
+  border-radius: 20px;
+  box-shadow: 3px 3px 3px rgb(161, 155, 155);
+  margin: 0px 3px -10px;
+}
+
+footer {
+  justify-content: center;
+  display: flex;
+  margin-top: 40px;
+}
+/* .itens_1 {
+  display: flex;
+} */
+
+/* .itens_2 {
+  display: flex;
+} */
