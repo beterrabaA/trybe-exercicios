@@ -22,7 +22,8 @@
   
   .menu-container {
     display: flex;
-    flex-basis: 500px;
+    order: 1;
+    flex: 1 500px;
   }
   
   .menu-container ul {
@@ -38,12 +39,8 @@
     list-style: none;
     margin-right: 10px;
   }
-  
 
-  .logo-container {
-    width: 268px;
-  }
-
+/* 
 .header-container :nth-child(1) {
   order: 1;
-}
+} */
