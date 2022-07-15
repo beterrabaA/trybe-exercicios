@@ -1,9 +1,8 @@
-const fatoral = (numero) => {
-    let count = 1
-    for (let i = 1; i <= numero; i++) {
-        count *= i
-    }
-    console.log(count) 
+const maiorPalavra = (frase) => {
+    let sepa = frase.split(' ')
+    console.log(sepa.sort((a,b) => {
+        return a.length - b.length
+    })[sepa.length -1])
 }
 
-fatoral(5)
+maiorPalavra('Antônio foi no banheiro e não sabemos o que aconteceu')
