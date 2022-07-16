@@ -1,8 +1,6 @@
-const maiorPalavra = (frase) => {
-    let sepa = frase.split(' ')
-    console.log(sepa.sort((a,b) => {
-        return a.length - b.length
-    })[sepa.length -1])
-}
+var contador = document.querySelector('.badge');
 
-maiorPalavra('Antônio foi no banheiro e não sabemos o que aconteceu')
+document.querySelector('button').addEventListener('click', function(){
+  var numero = parseInt(contador.textContent) + 1;
+  contador.textContent = numero;
+});
