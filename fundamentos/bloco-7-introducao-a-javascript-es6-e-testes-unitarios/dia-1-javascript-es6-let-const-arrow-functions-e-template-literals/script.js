@@ -1,6 +1,13 @@
-var contador = document.querySelector('.badge');
+const funcao1 = (nome) => {
+    return console.log(`Tryber ${nome} aqui`)
+}
 
-document.querySelector('button').addEventListener('click', function(){
-  var numero = parseInt(contador.textContent) + 1;
-  contador.textContent = numero;
-});
+const funcao2 = (param1,param2,param3) => {
+    funcao1('Lucas');
+    return console.log(`Minhas três principais habilidades são:
+${param1}
+${param2}
+${param3}`)
+}
+
+funcao2('JavaScript','HTML','CSS')
