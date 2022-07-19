@@ -19,7 +19,20 @@
       const value1 = document.getElementById('value1').value;
       const value2 = document.getElementById('value2').value;
       const result = Number(value1) + Number(value2);
-      document.getElementById('result').innerHTML = `Resultado: ${result}`;
+      const numNan = () => {if(isNaN(`${result}`)) {throw new Error('Numero Inválido')}
+      if (`${value1}`=== '' || `${value2}` === '') {
+        throw new Error('Espaços vazios')
+      }
+    }
+
+      try {
+        numNan()
+        document.getElementById('result').innerHTML = `Resultado: ${result}`;
+      } catch(erro) {
+        document.getElementById('result').innerHTML = `${erro.message}`;
+        console.log('adasd')
+      }
+
       document.getElementById('value1').value = '';
       document.getElementById('value2').value = '';
     }
