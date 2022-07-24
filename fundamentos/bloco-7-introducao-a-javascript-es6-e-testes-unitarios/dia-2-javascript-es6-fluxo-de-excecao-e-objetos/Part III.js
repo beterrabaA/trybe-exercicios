@@ -94,3 +94,58 @@ const verifyPair = (aulas,marcador,palavra) => {
 
 
   verifyPair(lesson3, 'materia', 'Maria Clara')
+
+
+  // BÔNUS
+
+
+  //Uma função para contar quantos estudantes assistiram às aulas de Matemática. Use o objeto criado no exercício 5.
+
+const aulasSelecionada = (ob = testa) => {
+  let ind = Object.keys(ob)
+
+  let contador = 0;
+
+for(item in ind) {
+  if((ob[ind[item]].materia) === 'Matemática') {
+    let valor = ob[ind[item]].numeroEstudantes
+    contador += valor
+  }
+}
+
+console.log(`${contador} alunos foram para aula de ${ob[ind[0]].materia}`)
+
+}
+
+aulasSelecionada()
+
+// Crie uma função que deverá retornar um objeto que representa o relatório do professor ou professora,
+//  as aulas que ele ou ela ministrou e o número total de estudantes.
+
+const createReport = (test,pessoa) => {
+  let ind = Object.keys(test)
+  let novoCurriculo = {}
+
+let nwarray = []
+let contador = 0;
+
+for(item in ind) {
+  if((testa[ind[item]].professor) === pessoa) {
+    let valor = test[ind[item]].materia
+    let estudantes = test[ind[item]].numeroEstudantes
+    contador += estudantes
+    nwarray.push(valor)
+  }
+}
+
+novoCurriculo.nome = pessoa
+novoCurriculo.aulas = nwarray
+novoCurriculo.estudantes = contador
+
+
+
+console.log(novoCurriculo)
+
+}
+
+createReport(testa,'Maria Clara')
