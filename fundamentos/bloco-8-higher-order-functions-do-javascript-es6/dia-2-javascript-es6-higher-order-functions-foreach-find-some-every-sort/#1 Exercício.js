@@ -79,7 +79,7 @@ function smallerName() {
     let nameBook;
     // escreva aqui o seu código
     let array = []
-    let alfa = books.forEach((a, b, c) => {
+    let alfa = books.forEach((a) => {
         array.push((a.name))
     })
 
