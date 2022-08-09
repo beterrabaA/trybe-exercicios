@@ -73,7 +73,7 @@ O programa conta com mais de 1.500 horas de aulas presenciais e online, aborda i
 
 ##### Bloco 9: Assincronicidade & Callbacks
 
-- [ ] 9-1: _JavaScript Assíncrono e Callbacks_
+- [x] 9-1: _[JavaScript Assíncrono e Callbacks](https://github.com/Lerpardo/trybe-exercicios/tree/master/front-end/bloco-9-javascript-e-testes-assincronos/dia-1-javascript-assincrono-e-callbacks)_
 - [ ] 9-2: _JavaScript Promises_
 - [ ] 9-3: _[Projeto - Carrinho de Compras]()_
 
