@@ -21,9 +21,9 @@ O programa conta com mais de 1.500 horas de aulas presenciais e online, aborda i
 
 ##### Bloco 3: Introdução - HTML & CSS
 
-- [ ] 3-1: _[HTML & CSS - Estruturas de página](https://github.com/Lerpardo/trybe-exercicios/tree/master/fundamentos/bloco-3-introducao-a-html-e-css/dia-1-html-css-estruturas-de-pagina)_
-- [ ] 3-2: _[HTML & CSS - Primeiros passos em CSS](https://github.com/Lerpardo/trybe-exercicios/tree/master/fundamentos/bloco-3-introducao-a-html-e-css/dia-2-html-css-primeiros-passos-em-css)_
-- [ ] 3-3: _[HTML & CSS - Seletores e posicionamento](https://github.com/Lerpardo/trybe-exercicios/tree/master/fundamentos/bloco-3-introducao-a-html-e-css/dia-3-html-css-seletores-e-posicionamento)_
+- [x] 3-1: _[HTML & CSS - Estruturas de página](https://github.com/Lerpardo/trybe-exercicios/tree/master/fundamentos/bloco-3-introducao-a-html-e-css/dia-1-html-css-estruturas-de-pagina)_
+- [x] 3-2: _[HTML & CSS - Primeiros passos em CSS](https://github.com/Lerpardo/trybe-exercicios/tree/master/fundamentos/bloco-3-introducao-a-html-e-css/dia-2-html-css-primeiros-passos-em-css)_
+- [x] 3-3: _[HTML & CSS - Seletores e posicionamento](https://github.com/Lerpardo/trybe-exercicios/tree/master/fundamentos/bloco-3-introducao-a-html-e-css/dia-3-html-css-seletores-e-posicionamento)_
 - [ ] 3-4: _HTML Semântico_
 - [ ] 3-5: _[Projeto - HTML & CSS]()_
 
