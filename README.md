@@ -25,7 +25,7 @@ O programa conta com mais de 1.500 horas de aulas presenciais e online, aborda i
 - [x] 3-2: _[HTML & CSS - Primeiros passos em CSS](https://github.com/Lerpardo/trybe-exercicios/tree/master/fundamentos/bloco-3-introducao-a-html-e-css/dia-2-html-css-primeiros-passos-em-css)_
 - [x] 3-3: _[HTML & CSS - Seletores e posicionamento](https://github.com/Lerpardo/trybe-exercicios/tree/master/fundamentos/bloco-3-introducao-a-html-e-css/dia-3-html-css-seletores-e-posicionamento)_
 - [x] 3-4: _[HTML Semântico](https://github.com/Lerpardo/trybe-exercicios/tree/master/fundamentos/bloco-3-introducao-a-html-e-css/dia-4-html-semantico)_
-- [ ] 3-5: _[Projeto - HTML & CSS]()_
+- [x] 3-5: _[Projeto - Lessons Learned]()_
 
 ##### Bloco 4: Introdução - JavaScript
 
