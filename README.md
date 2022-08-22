@@ -90,7 +90,7 @@ O programa conta com mais de 1.500 horas de aulas presenciais e online, aborda i
 - [x] 10-1: _'Hello, world' no React_
 - [x] 10-2: _Pokedex-Part-1_
 - [x] 10-3: _Jest - Simulando comportamentos_
-- [x] 10-4: _[Projeto - Sistema Solar]()_
+- [x] 10-4: _[Projeto - Sistema Solar](https://github.com/Lerpardo/trybe-projetos/tree/main/system-solar)_
 
 ##### Bloco 11: Componentes com Estado, Eventos e Formulários com React
 
