@@ -1,0 +1,238 @@
+{
+  "stats": {
+    "suites": 4,
+    "tests": 4,
+    "passes": 0,
+    "pending": 0,
+    "failures": 4,
+    "start": "2022-08-10T18:54:51.472Z",
+    "end": "2022-08-10T18:55:16.422Z",
+    "duration": 24950,
+    "testsRegistered": 4,
+    "passPercent": 0,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "e867cdc8-aed9-487c-ae6b-e6b1b3c03999",
+      "title": "",
+      "fullFile": "cypress/integration/project.spec.js",
+      "file": "cypress/integration/project.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "1f524d2c-6b4d-4484-b775-eb396cd6acf5",
+          "title": "Project Javascript Async",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [],
+          "suites": [
+            {
+              "uuid": "71b50ac4-cca0-46ba-821f-7135122d4c50",
+              "title": "1 - Vamos consultar uma API que fornece os valores de crypto moedas",
+              "fullFile": "",
+              "file": "",
+              "beforeHooks": [],
+              "afterHooks": [],
+              "tests": [
+                {
+                  "title": "Implemente uma requisição, para consumir a API crypto moedas",
+                  "fullTitle": "Project Javascript Async 1 - Vamos consultar uma API que fornece os valores de crypto moedas Implemente uma requisição, para consumir a API crypto moedas",
+                  "timedOut": null,
+                  "duration": 4762,
+                  "state": "failed",
+                  "speed": null,
+                  "pass": false,
+                  "fail": true,
+                  "pending": false,
+                  "context": null,
+                  "code": "cy.get(\"@mockFetch\").should(\"calledWith\", \"https://api.coincap.io/v2/assets\");",
+                  "err": {
+                    "message": "AssertionError: Timed out retrying after 4000ms: expected mockFetch to have been called with arguments \"https://api.coincap.io/v2/assets\", but it was never called",
+                    "estack": "AssertionError: Timed out retrying after 4000ms: expected mockFetch to have been called with arguments \"https://api.coincap.io/v2/assets\", but it was never called\n    at Context.eval (http://localhost:64994/__cypress/tests?p=cypress\\integration\\project.spec.js:114:28)",
+                    "diff": null
+                  },
+                  "uuid": "9bea6100-2e8d-48b7-a111-c59aba5decc1",
+                  "parentUUID": "71b50ac4-cca0-46ba-821f-7135122d4c50",
+                  "isHook": false,
+                  "skipped": false
+                }
+              ],
+              "suites": [],
+              "passes": [],
+              "failures": [
+                "9bea6100-2e8d-48b7-a111-c59aba5decc1"
+              ],
+              "pending": [],
+              "skipped": [],
+              "duration": 4762,
+              "root": false,
+              "rootEmpty": false,
+              "_timeout": 2000
+            },
+            {
+              "uuid": "dad7df28-ec7a-4861-8dc0-f5ce92a652f3",
+              "title": "2 - Agora vamos fazer com que as moedas apareçam na tela",
+              "fullFile": "",
+              "file": "",
+              "beforeHooks": [],
+              "afterHooks": [],
+              "tests": [
+                {
+                  "title": "Dentro da <ul> com id coins-list crie uma <li> para cada moeda da requisição",
+                  "fullTitle": "Project Javascript Async 2 - Agora vamos fazer com que as moedas apareçam na tela Dentro da <ul> com id coins-list crie uma <li> para cada moeda da requisição",
+                  "timedOut": null,
+                  "duration": 4468,
+                  "state": "failed",
+                  "speed": null,
+                  "pass": false,
+                  "fail": true,
+                  "pending": false,
+                  "context": null,
+                  "code": "cy.get(\"#coins-list\").children(\"li\");",
+                  "err": {
+                    "message": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `li`, but never found it. Queried from element: <ul#coins-list>",
+                    "estack": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `li`, but never found it. Queried from element: <ul#coins-list>\n    at Context.eval (http://localhost:64994/__cypress/tests?p=cypress\\integration\\project.spec.js:119:29)",
+                    "diff": null
+                  },
+                  "uuid": "559e84e0-b322-4fd3-a7ab-45229b3811d8",
+                  "parentUUID": "dad7df28-ec7a-4861-8dc0-f5ce92a652f3",
+                  "isHook": false,
+                  "skipped": false
+                },
+                {
+                  "title": "Utilize o seguinte formato: Nome da moeda (símbolo da moeda): valor em dólares. Exemplo: Bitcoin (BTC): 23207.95",
+                  "fullTitle": "Project Javascript Async 2 - Agora vamos fazer com que as moedas apareçam na tela Utilize o seguinte formato: Nome da moeda (símbolo da moeda): valor em dólares. Exemplo: Bitcoin (BTC): 23207.95",
+                  "timedOut": null,
+                  "duration": 4658,
+                  "state": "failed",
+                  "speed": null,
+                  "pass": false,
+                  "fail": true,
+                  "pending": false,
+                  "context": null,
+                  "code": "cy.get(\"#coins-list\").children(\"li\").should(\"have.length.at.least\", 10).first().should(\"have.text\", \"Bitcoin (BTC): 23207.95\");",
+                  "err": {
+                    "message": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `li`, but never found it. Queried from element: <ul#coins-list>",
+                    "estack": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `li`, but never found it. Queried from element: <ul#coins-list>\n    at Context.eval (http://localhost:64994/__cypress/tests?p=cypress\\integration\\project.spec.js:122:44)",
+                    "diff": null
+                  },
+                  "uuid": "47e0f3ce-8abc-4a76-aa45-d72c488fd63e",
+                  "parentUUID": "dad7df28-ec7a-4861-8dc0-f5ce92a652f3",
+                  "isHook": false,
+                  "skipped": false
+                }
+              ],
+              "suites": [],
+              "passes": [],
+              "failures": [
+                "559e84e0-b322-4fd3-a7ab-45229b3811d8",
+                "47e0f3ce-8abc-4a76-aa45-d72c488fd63e"
+              ],
+              "pending": [],
+              "skipped": [],
+              "duration": 9126,
+              "root": false,
+              "rootEmpty": false,
+              "_timeout": 2000
+            },
+            {
+              "uuid": "0ba0394c-7a2c-47ab-b831-3f81851edfe8",
+              "title": "3 - Mostrar somente as 10 primeiras moedas da requisição",
+              "fullFile": "",
+              "file": "",
+              "beforeHooks": [],
+              "afterHooks": [],
+              "tests": [
+                {
+                  "title": "Filtrar o array das moedas para mostrar apenas as 10 primeiras?",
+                  "fullTitle": "Project Javascript Async 3 - Mostrar somente as 10 primeiras moedas da requisição Filtrar o array das moedas para mostrar apenas as 10 primeiras?",
+                  "timedOut": null,
+                  "duration": 10580,
+                  "state": "failed",
+                  "speed": null,
+                  "pass": false,
+                  "fail": true,
+                  "pending": false,
+                  "context": null,
+                  "code": "cy.get(\"#coins-list > li\", {\n  timeout: 10000\n}).should(\"have.length\", 10);",
+                  "err": {
+                    "message": "AssertionError: Timed out retrying after 10000ms: Expected to find element: `#coins-list > li`, but never found it.",
+                    "estack": "AssertionError: Timed out retrying after 10000ms: Expected to find element: `#coins-list > li`, but never found it.\n    at Context.eval (http://localhost:64994/__cypress/tests?p=cypress\\integration\\project.spec.js:129:10)",
+                    "diff": null
+                  },
+                  "uuid": "7b9b9679-90f5-4a7c-9c9c-446e8a38a629",
+                  "parentUUID": "0ba0394c-7a2c-47ab-b831-3f81851edfe8",
+                  "isHook": false,
+                  "skipped": false
+                }
+              ],
+              "suites": [],
+              "passes": [],
+              "failures": [
+                "7b9b9679-90f5-4a7c-9c9c-446e8a38a629"
+              ],
+              "pending": [],
+              "skipped": [],
+              "duration": 10580,
+              "root": false,
+              "rootEmpty": false,
+              "_timeout": 2000
+            }
+          ],
+          "passes": [],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 0,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "5.0.0"
+    },
+    "marge": {
+      "options": {
+        "id": "default",
+        "reportDir": "cypress/reports",
+        "overwrite": true,
+        "html": false,
+        "json": true
+      },
+      "version": "4.1.0"
+    }
+  }
+}
