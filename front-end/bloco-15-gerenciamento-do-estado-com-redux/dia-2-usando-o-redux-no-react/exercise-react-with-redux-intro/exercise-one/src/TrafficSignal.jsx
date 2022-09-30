@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
+import { changeSignalAction } from './redux/actions';
 import redSignal from './images/redSignal.jpeg';
 import greenSignal from './images/greenSignal.jpeg';
 import yellowSignal from './images/yellowSignal.jpeg';
@@ -18,30 +19,36 @@ const renderSignal = (signalColor) => {
   }
 };
 
-function TrafficSignal({ signalColor }) {
+function TrafficSignal({ signalColor, changeSignal }) {
   return (
     <div>
       <div className="button-container">
-        <button type="button">Red</button>
-        <button type="button">Yellow</button>
-        <button type="button">Green</button>
+        <button onClick={ () => changeSignal('red') } type="button">
+          Red
+        </button>
+        <button onClick={ () => changeSignal('yellow') } type="button">
+          Yellow
+        </button>
+        <button onClick={ () => changeSignal('green') } type="button">
+          Green
+        </button>
       </div>
       <img className="signal" src={ renderSignal(signalColor) } alt="" />
     </div>
   );
 }
 
-const mapStateToProps = () => ({
-  signalColor: '', /* Coloque seu código aqui... */
+const mapStateToProps = (state) => ({
+  signalColor: state.signal.color,
 });
 
-const mapDispatchToProps = () => ({
-  changeSignal: '', /* Coloque seu código aqui... */
+const mapDispatchToProps = (dispatch) => ({
+  changeSignal: (...payload) => dispatch(changeSignalAction(...payload)),
 });
 
 TrafficSignal.propTypes = {
   signalColor: PropTypes.string.isRequired,
-  // changeSignal: PropTypes.func.isRequired,
+  changeSignal: PropTypes.func.isRequired,
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(TrafficSignal);
