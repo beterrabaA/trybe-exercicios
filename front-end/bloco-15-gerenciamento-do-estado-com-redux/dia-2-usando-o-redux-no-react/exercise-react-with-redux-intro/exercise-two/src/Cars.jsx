@@ -1,5 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { connect } from 'react-redux';
+import { moveCarAction } from './redux/actions';
 import carBlue from './images/carBlue.jpeg';
 import carRed from './images/carRed.jpeg';
 import carYellow from './images/carYellow.jpeg';
@@ -59,4 +61,14 @@ Cars.propTypes = {
   moveCar: PropTypes.func.isRequired,
 };
 
-export default Cars;
+const mapStateToProps = (state) => ({
+  redCar: state.cars.red,
+  blueCar: state.cars.blue,
+  yellowCar: state.cars.yellow,
+});
+
+const mapDispatchToProps = (dispatch) => ({
+  moveCar: (...paylaod) => dispatch(moveCarAction(...paylaod)),
+});
+
+export default connect(mapStateToProps, mapDispatchToProps)(Cars);
