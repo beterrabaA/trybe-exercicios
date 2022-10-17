@@ -39,5 +39,4 @@ describe('4. Testes da função saveFavoriteMagicCard', () => {
     ]);
   });
 });
-//Beterraba Dev
 
