@@ -31,3 +31,5 @@ describe('2. Testando o retorno da função getMagicCard', () => {
     expect(response.name).toBe('Ancestor\'s Chosen');
   });
 });
+
+//Beterraba Dev
