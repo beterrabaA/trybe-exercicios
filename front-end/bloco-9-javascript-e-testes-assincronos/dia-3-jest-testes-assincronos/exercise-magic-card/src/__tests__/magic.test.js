@@ -32,4 +32,3 @@ describe('2. Testando o retorno da função getMagicCard', () => {
   });
 });
 
-//Beterraba Dev
