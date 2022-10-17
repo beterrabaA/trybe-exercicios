@@ -81,9 +81,7 @@ O programa conta com mais de 1.500 horas de aulas presenciais e online, aborda i
 - [x] 9-1: _Introdução - Front-end_
 - [x] 9-1: _JavaScript Assíncrono  e Callbacks_
 - [x] 9-2: _JavaScript Assíncrono - Fetch API e async/await_
-- [x] 9-2: _JavaScript-Async_
 - [x] 9-3: _Testes Assícrono_
-- [x] 9-3: _Magic-Card_
 - [x] 9-4: _[Projeto - Carrinho de Compras]()_
 
 ##### Bloco 10: Introdução à React
