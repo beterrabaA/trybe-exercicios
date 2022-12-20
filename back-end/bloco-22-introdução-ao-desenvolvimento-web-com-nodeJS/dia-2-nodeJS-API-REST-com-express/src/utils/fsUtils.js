@@ -32,8 +32,25 @@ async function addNewMovies(movie) {
     }
 }
 
+async function updateMovieData(id, updatedMovie) {
+    const oldsMovies = await readMovies();
+    const updatedMovieData = { id, ...updatedMovie };
+    const retorno = oldsMovies.reduce((a, c) => {
+        if (c.id === updatedMovieData.id) return [...a, updatedMovieData];
+        return [...a, c];
+    }, []);
+
+    try {
+        await fs.writeFile('./src/movies.json', JSON.stringify(retorno));
+        return updatedMovieData;
+    } catch (e) {
+        console.error(`Erro ao ler o arquivo: ${e.message}`);
+    }
+}
+
 module.exports = {
     readMovies,
     getMovieById,
     addNewMovies,
+    updateMovieData,
 };
