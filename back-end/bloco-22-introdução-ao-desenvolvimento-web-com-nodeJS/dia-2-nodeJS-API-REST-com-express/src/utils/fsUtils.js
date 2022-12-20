@@ -60,10 +60,19 @@ async function deleteMovieById(id) {
     }
 }
 
+async function queryMovies(query) {
+    const data = await readMovies();
+    if (query) {
+        const queriedMovies = data.filter((e) => (e.movie).includes(query));
+        return queriedMovies;
+    }
+}
+
 module.exports = {
     readMovies,
     getMovieById,
     addNewMovies,
     updateMovieData,
     deleteMovieById,
+    queryMovies,
 };
