@@ -1,8 +1,10 @@
 const fs = require('fs').promises;
 
+const PATH_NAME = './src/movies.json';
+
 async function readMovies() {
     try {
-        const data = await fs.readFile('./src/movies.json', 'utf-8');
+        const data = await fs.readFile(PATH_NAME, 'utf-8');
         const movies = JSON.parse(data);
 
         return movies;
@@ -13,7 +15,7 @@ async function readMovies() {
 
 async function getMovieById(id) {
     try {
-        const data = await fs.readFile('./src/movies.json', 'utf-8');
+        const data = await fs.readFile(PATH_NAME, 'utf-8');
         const movies = JSON.parse(data);
 
         return movies.find((e) => e.id === id);
@@ -25,7 +27,7 @@ async function addNewMovies(movie) {
     try {
         const oldsMovies = await readMovies();
         const newMovieWithId = { id: oldsMovies.length + 1, ...movie };
-        await fs.writeFile('./src/movies.json', JSON.stringify([...oldsMovies, newMovieWithId]));
+        await fs.writeFile(PATH_NAME, JSON.stringify([...oldsMovies, newMovieWithId]));
         return newMovieWithId;
     } catch (e) {
         console.error(`Erro ao ler o arquivo: ${e.message}`);
@@ -41,8 +43,18 @@ async function updateMovieData(id, updatedMovie) {
     }, []);
 
     try {
-        await fs.writeFile('./src/movies.json', JSON.stringify(retorno));
+        await fs.writeFile(PATH_NAME, JSON.stringify(retorno));
         return updatedMovieData;
+    } catch (e) {
+        console.error(`Erro ao ler o arquivo: ${e.message}`);
+    }
+}
+
+async function deleteMovieById(id) {
+    const data = await readMovies();
+    const filteredMovieData = data.filter((e) => e.id !== Number(id));
+    try {
+        await fs.writeFile(PATH_NAME, JSON.stringify(filteredMovieData));
     } catch (e) {
         console.error(`Erro ao ler o arquivo: ${e.message}`);
     }
@@ -53,4 +65,5 @@ module.exports = {
     getMovieById,
     addNewMovies,
     updateMovieData,
+    deleteMovieById,
 };
